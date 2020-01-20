@@ -1,0 +1,20 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- navbar-fixed-top -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark  ">
+    <a class="navbar-brand" href="#"><b>PeaQock </b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link " *ngIf="authServ.isUserLoggedIn()" href="welcome/admin">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link " *ngIf="authServ.isUserLoggedIn()" routerLink="/licences">List licences</a>
+            <!-- <a class="nav-item nav-link disabled" href="/logout">Logout</a> -->
+        </div>
+        <div class="navbar-nav navbar-collapse justify-content-end" class=" navbar-right">
+            <a class="nav-item nav-link " *ngIf="!authServ.isUserLoggedIn()" routerLink="/login">Login</a>
+            <a class="nav-item nav-link  " *ngIf="authServ.isUserLoggedIn()" routerLink="/logout">Logout</a>
+            <!-- <a class="nav-item nav-link disabled" href="/logout">Logout</a> -->
+        </div>
+    </div>
+</nav>

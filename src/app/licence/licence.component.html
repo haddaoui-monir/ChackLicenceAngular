@@ -1,0 +1,41 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<h4>
+    <span class=" badge-secondary  ex1"> Ajouter Licence</span></h4>
+<br>
+<span>
+<fa-icon [icon]="fabackward"  routerLink="/licences">
+</fa-icon>
+</span> <br>
+<div class="container">
+    <br>
+    <fieldset class="form-goup">
+        <label>Client</label>
+        <input type="text" [ngModel]="licence.client" class="form-control" (ngModelChange)="licence.client=$event" name="client" required="required">
+    </fieldset>
+    <fieldset class="form-goup">
+        <label>Description</label>
+        <input type="text" [ngModel]="licence.description" class="form-control" (ngModelChange)="licence.description=$event" name="description" required="required">
+    </fieldset>
+    <fieldset class="form-goup">
+        <label>Date debut</label>
+        <input type="date" [ngModel]="licence.datedebut| date:'yyyy-MM-dd' " (ngModelChange)="licence.datedebut=$event" class="form-control" name="datedebut" required="required">
+    </fieldset>
+    <fieldset class="form-goup">
+        <label>Date fin</label>
+        <input type="date" [ngModel]="licence.datefin | date:'yyyy-MM-dd'
+         " (ngModelChange)="licence.datefin=$event" class="form-control" name="datefin" required="required">
+    </fieldset>
+    <fieldset class="form-goup">
+        <label>Key</label>
+        <input type="text" readonly [ngModel]="licence.licencekey" class="form-control" (ngModelChange)="licence.licencekey=$event" name="licencekey" required="required">
+    </fieldset>
+    <br>
+    <button class="button button2" (click)="saveLicence()"> Save 
+       
+</button>
+
+</div>
+<br><br><br><br>

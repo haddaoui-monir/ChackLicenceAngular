@@ -1,0 +1,25 @@
+<div>
+    <h4>
+        <span class=" badge-secondary  ex1"> Login !</span></h4>
+</div>
+<div class="container">
+    <div class="alert alert-warning" *ngIf="invalidLogin">
+        {{errorMessage}}
+    </div>
+
+    <form>
+        <!-- action="action_page.php" method="post" -->
+        <div class="container">
+            <label><b>User name</b></label>
+            <input type="text" value="{{username}}" [(ngModel)]="username" name="username">
+            <label><b>Password</b></label>
+            <input type="password" value="{{password}}" [(ngModel)]="password" name="password">
+            <label>name::<b>{{username}}</b></label>
+            <label>passe::<b>{{password}}</b></label>
+            <button (click)=handleJWTAuthLogin()>Login</button>
+            <!-- <button (click)=handleBasicAuthLogin()>Login</button> -->
+            <!--  <button (click)=handleJWTAuthLogin()>Login</button> -->
+
+        </div>
+    </form>
+</div>
